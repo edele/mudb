@@ -17,10 +17,6 @@ class CreateLabelsTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
-
-        Schema::table('artists', function (Blueprint $table) {
-            $table->foreign('label')->references('id')->on('labels');
-        });
     }
 
     /**
@@ -30,9 +26,6 @@ class CreateLabelsTable extends Migration
      */
     public function down()
     {
-        Schema::table('artists', function(Blueprint $table){
-            $table->dropForeign('artists_label_foreign');
-        });
         Schema::drop('labels');
     }
 }

@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Artist extends Model
 {
-    public function label()
+    protected $guarded = ['id', 'created_at', 'updated_at'];
+
+    public function labels()
     {
-        return $this->belongsTo('App\Label');
+        return $this->belongsToMany('App\Label');
     }
 }

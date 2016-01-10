@@ -29,28 +29,28 @@ class ArtistsController extends Controller
     public function show($id)
     {
         $artist = Artist::find($id);
-        $artist->load('label');
+        $artist->load('labels');
 
         return $artist;
     }
 
-    public function update(Request $request, $id)
-    {
-        $artist = Artist::find($id);
+    // public function update(Request $request, $id)
+    // {
+    //     $artist = Artist::find($id);
 
-        $artist->update($request->all());
-        $artist->curators()->sync($request->get('curators'));
+    //     $artist->update($request->all());
+    //     $artist->curators()->sync($request->get('curators'));
 
-        $request->session()->flash('status', 'Проект успешно изменен');
-        return redirect('artists');
-    }
+    //     $request->session()->flash('status', 'Проект успешно изменен');
+    //     return redirect('artists');
+    // }
 
-    public function destroy($id)
-    {
-        $artist = Artist::find($id);
+    // public function destroy($id)
+    // {
+    //     $artist = Artist::find($id);
 
-        $artist->delete();
+    //     $artist->delete();
 
-        return redirect('artists');
-    }
+    //     return redirect('artists');
+    // }
 }
