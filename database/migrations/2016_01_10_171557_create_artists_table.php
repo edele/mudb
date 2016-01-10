@@ -16,6 +16,7 @@ class CreateArtistsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('origin');
+            $table->integer('label')->unsigned();
             $table->date('activeFrom');
             $table->date('activeTo')->nullable(); // null === active now
             $table->timestamps();

@@ -16,6 +16,7 @@ class ArtistsSeeder extends Seeder
         Artist::create([
             'name' => 'Muse',
             'origin' => 'Teignmouth, Devon, England',
+            'label' => 1,
             'activeFrom' => Carbon::create(1994),
             'activeTo' => null,
         ]);

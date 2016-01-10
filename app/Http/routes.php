@@ -26,6 +26,10 @@ Route::get('/', function () {
 |
 */
 
+Route::group(['prefix' => 'api/v1'], function () {
+    Route::resource('artists', 'ArtistsController');
+});
+
 Route::group(['middleware' => ['web']], function () {
     //
 });

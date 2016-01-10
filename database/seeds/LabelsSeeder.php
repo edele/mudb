@@ -1,5 +1,6 @@
 <?php
 
+use App\Label;
 use Illuminate\Database\Seeder;
 
 class LabelsSeeder extends Seeder
@@ -11,6 +12,6 @@ class LabelsSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Label::create(['name' => 'Warner Bros. Records']);
     }
 }
