@@ -10,7 +10,7 @@ module.exports = {
   context: path.resolve(__dirname, 'resources/assets/js'),
 
   entry: {
-    landing: 'landing',
+    artists: 'artists',
     common: 'common'
   },
 

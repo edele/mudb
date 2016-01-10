@@ -6,24 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Music Database</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <style>
+            .artist {
+                margin-bottom: 40px;
+            }
+        </style>
     </head>
     <body>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Music Database</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li><a href="/artists">Artists</a></li>
-                    <li><a href="/labels">Labels</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <div class="container">
-            <h1>Music Database</h1>
-        </div>
-        <script src="/js/common.js"></script>
-        <script src="/js/landing.js"></script>
+        <div id="app"></div>
     </body>
+    <script src="/js/common.js"></script>
+    <script src="/js/artists.js"></script>
 </html>
