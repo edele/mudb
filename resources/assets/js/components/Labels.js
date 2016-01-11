@@ -2,7 +2,7 @@ import React from 'react'
 import ArtistItem from 'components/ArtistItem'
 import fetch from 'isomorphic-fetch'
 
-class Artists extends React.Component {
+class Labels extends React.Component {
   constructor(props) {
     super(props)
     this.state = props
@@ -11,16 +11,16 @@ class Artists extends React.Component {
   render() {
     return (
       <div className="container">
-        <h1>Artists</h1>
+        <h1>Labels</h1>
         {this.props.children}
       </div>
     )
   }
 }
 
-Artists.defaultProps = {
+Labels.defaultProps = {
   loaded: false,
   items: []
 }
 
-export default Artists
+export default Labels

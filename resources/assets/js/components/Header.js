@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 export default React.createClass({
   render: function(){
@@ -6,14 +7,14 @@ export default React.createClass({
       <nav className="navbar navbar-default">
         <div className="container-fluid">
           <div className="navbar-header">
-            <a className="navbar-brand" href="#">Music Database</a>
+            <Link className="navbar-brand" to="/">Music Database</Link>
           </div>
           <ul className="nav navbar-nav">
-            <li><a href="/artists">Artists</a></li>
-            <li><a href="/labels">Labels</a></li>
+            <li><Link to="/artists">Artists</Link></li>
+            <li><Link to="/labels">Labels</Link></li>
           </ul>
         </div>
       </nav>
-    );
+    )
   }
-});
+})

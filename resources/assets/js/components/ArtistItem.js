@@ -1,6 +1,7 @@
 import React from 'react'
+import {Link} from 'react-router'
 
-class Artist extends React.Component {
+class ArtistItem extends React.Component {
   constructor(props) {
     super(props)
     this.state = props
@@ -22,7 +23,7 @@ class Artist extends React.Component {
   render() {
     return (
       <div className="artist">
-        <h3>{this.state.name}</h3>
+        <h3><Link to={`/artists/${this.state.id}`}>{this.state.name}</Link></h3>
         <div><b>Origin:</b> {this.state.origin}</div>
         <div><b>Active:</b> {this.getActiveYears()}</div>
       </div>
@@ -30,11 +31,11 @@ class Artist extends React.Component {
   }
 }
 
-Artist.propTypes = {
+ArtistItem.propTypes = {
   activeFrom: React.PropTypes.string.isRequired,
   activeTo: React.PropTypes.string,
   name: React.PropTypes.string.isRequired,
   origin: React.PropTypes.string.isRequired
 }
 
-export default Artist
+export default ArtistItem
