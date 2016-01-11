@@ -1,8 +1,8 @@
 import React from 'react'
-import Artist from 'components/Artist'
+import MusicLabel from 'components/MusicLabel'
 import fetch from 'isomorphic-fetch'
 
-class Artists extends React.Component {
+class MusicLabels extends React.Component {
   constructor(props) {
     super(props)
     this.state = props
@@ -10,7 +10,7 @@ class Artists extends React.Component {
   }
 
   fetch() {
-    fetch('/api/v1/artists')
+    fetch('/api/v1/labels')
     .then(resp => {
       if (resp.status >= 400) {
         throw new Error('Bad response from server')
@@ -21,7 +21,7 @@ class Artists extends React.Component {
         let items = []
         resp.data.map(function(item) {
           items.push(
-            <Artist
+            <MusicLabel
               key={item.id}
               {...item}
             />
@@ -40,7 +40,7 @@ class Artists extends React.Component {
     } else {
       return (
         <div className="container">
-          <h1>Artists</h1>
+          <h1>Music labels</h1>
           {this.state.items}
         </div>
       )
@@ -48,9 +48,9 @@ class Artists extends React.Component {
   }
 }
 
-Artists.defaultProps = {
+MusicLabels.defaultProps = {
   loaded: false,
   items: []
 }
 
-export default Artists
+export default MusicLabels

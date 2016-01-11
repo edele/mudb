@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from 'components/Header'
 import Artists from 'components/Artists'
+import MusicLabels from 'components/MusicLabels'
 
 export default React.createClass({
   render: function(){
@@ -8,6 +9,7 @@ export default React.createClass({
       <div>
         <Header />
         <Artists />
+        <MusicLabels />
       </div>
     );
   }
