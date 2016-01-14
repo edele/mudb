@@ -10,8 +10,8 @@ export default React.createClass({
             <Link className="navbar-brand" to="/">Music Database</Link>
           </div>
           <ul className="nav navbar-nav">
-            <li><Link to="/artists">Artists</Link></li>
-            <li><Link to="/labels">Labels</Link></li>
+            <li><Link activeClassName="active" to="/artists">Artists</Link></li>
+            <li><Link activeClassName="active" to="/labels">Labels</Link></li>
           </ul>
         </div>
       </nav>
